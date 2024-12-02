@@ -1,0 +1,278 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{99C3100C-D51C-4BA5-B11D-9A24C7E2CDC2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>QL_BanGiay</RootNamespace>
+    <AssemblyName>QL_BanGiay</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.Desktop.v22.1, Version=22.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v22.1, Version=22.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Drawing.v22.1, Version=22.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v22.1.Core, Version=22.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Sparkline.v22.1.Core, Version=22.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v22.1, Version=22.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v22.1, Version=22.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v22.1, Version=22.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v22.1, Version=22.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v22.1, Version=22.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraWizard.v22.1, Version=22.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\..\..\..\Windows\assembly\GAC_MSIL\Microsoft.Office.Interop.Excel\15.0.0.0__71e9bce111e9429c\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationClient" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\AccessData.cs" />
+    <Compile Include="Classes\DataBaseProcess.cs" />
+    <Compile Include="Form_Baocao\FrmBaoCao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Baocao\FrmBaoCao.designer.cs">
+      <DependentUpon>FrmBaoCao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Baocao\TuNgay.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Form_Baocao\TuNgay.designer.cs">
+      <DependentUpon>TuNgay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_KhachHang\FrmKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_KhachHang\FrmKhachHang.Designer.cs">
+      <DependentUpon>FrmKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Kho\FrmChatLieu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Kho\FrmChatLieu.Designer.cs">
+      <DependentUpon>FrmChatLieu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Kho\FrmKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Kho\FrmKho.Designer.cs">
+      <DependentUpon>FrmKho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Kho\FrmKieuGiay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Kho\FrmKieuGiay.Designer.cs">
+      <DependentUpon>FrmKieuGiay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Kho\FrmSanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Kho\FrmSanPham.Designer.cs">
+      <DependentUpon>FrmSanPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Kho\FrmThuongHieu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Kho\FrmThuongHieu.Designer.cs">
+      <DependentUpon>FrmThuongHieu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Login\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Login\frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Main\frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Main\frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_NhanVien\FrmNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_NhanVien\FrmNhanVien.Designer.cs">
+      <DependentUpon>FrmNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="obj\Debug\.NETFramework,Version=v4.8.AssemblyAttributes.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form_Baocao\FrmBaoCao.resx">
+      <DependentUpon>FrmBaoCao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Baocao\TuNgay.resx">
+      <DependentUpon>TuNgay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_KhachHang\FrmKhachHang.resx">
+      <DependentUpon>FrmKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Kho\FrmChatLieu.resx">
+      <DependentUpon>FrmChatLieu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Kho\FrmKho.resx">
+      <DependentUpon>FrmKho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Kho\FrmKieuGiay.resx">
+      <DependentUpon>FrmKieuGiay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Kho\FrmSanPham.resx">
+      <DependentUpon>FrmSanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Kho\FrmThuongHieu.resx">
+      <DependentUpon>FrmThuongHieu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Login\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Main\frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_NhanVien\FrmNhanVien.resx">
+      <DependentUpon>FrmNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="obj\Debug\QL_BanGiay.frmLogin.resources" />
+    <EmbeddedResource Include="obj\Debug\QL_BanGiay.frmMain.resources" />
+    <EmbeddedResource Include="obj\Debug\QL_BanGiay.Properties.Resources.resources" />
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="bin\Debug\QL_BanGiay.exe.config" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\QL_BanGiay.csproj.AssemblyReference.cache" />
+    <None Include="obj\Debug\QL_BanGiay.csproj.CopyComplete" />
+    <None Include="obj\Debug\QL_BanGiay.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\QL_BanGiay.csproj.GenerateResource.cache" />
+    <None Include="obj\Debug\QL_BanGiay.csproj.SuggestedBindingRedirects.cache" />
+    <None Include="obj\Debug\_IsIncrementalBuild" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background_login.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background_login.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grbLogin_background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-login-100.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background_login1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Halloween.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\background_login.gif" />
+    <Content Include="bin\Debug\DevExpress.Data.Desktop.v22.1.dll" />
+    <Content Include="bin\Debug\DevExpress.Data.v22.1.dll" />
+    <Content Include="bin\Debug\DevExpress.Data.v22.1.xml" />
+    <Content Include="bin\Debug\DevExpress.Drawing.v22.1.dll" />
+    <Content Include="bin\Debug\DevExpress.Office.v22.1.Core.dll" />
+    <Content Include="bin\Debug\DevExpress.Office.v22.1.Core.xml" />
+    <Content Include="bin\Debug\DevExpress.Pdf.v22.1.Core.dll" />
+    <Content Include="bin\Debug\DevExpress.Pdf.v22.1.Core.xml" />
+    <Content Include="bin\Debug\DevExpress.Pdf.v22.1.Drawing.dll" />
+    <Content Include="bin\Debug\DevExpress.Pdf.v22.1.Drawing.xml" />
+    <Content Include="bin\Debug\DevExpress.Printing.v22.1.Core.dll" />
+    <Content Include="bin\Debug\DevExpress.Printing.v22.1.Core.xml" />
+    <Content Include="bin\Debug\DevExpress.RichEdit.v22.1.Core.dll" />
+    <Content Include="bin\Debug\DevExpress.RichEdit.v22.1.Core.xml" />
+    <Content Include="bin\Debug\DevExpress.Sparkline.v22.1.Core.dll" />
+    <Content Include="bin\Debug\DevExpress.Sparkline.v22.1.Core.xml" />
+    <Content Include="bin\Debug\DevExpress.Utils.v22.1.dll" />
+    <Content Include="bin\Debug\DevExpress.Utils.v22.1.xml" />
+    <Content Include="bin\Debug\DevExpress.XtraBars.v22.1.dll" />
+    <Content Include="bin\Debug\DevExpress.XtraBars.v22.1.xml" />
+    <Content Include="bin\Debug\DevExpress.XtraEditors.v22.1.dll" />
+    <Content Include="bin\Debug\DevExpress.XtraEditors.v22.1.xml" />
+    <Content Include="bin\Debug\DevExpress.XtraGrid.v22.1.dll" />
+    <Content Include="bin\Debug\DevExpress.XtraGrid.v22.1.xml" />
+    <Content Include="bin\Debug\DevExpress.XtraLayout.v22.1.dll" />
+    <Content Include="bin\Debug\DevExpress.XtraLayout.v22.1.xml" />
+    <Content Include="bin\Debug\DevExpress.XtraPrinting.v22.1.dll" />
+    <Content Include="bin\Debug\DevExpress.XtraPrinting.v22.1.xml" />
+    <Content Include="bin\Debug\DevExpress.XtraTreeList.v22.1.dll" />
+    <Content Include="bin\Debug\DevExpress.XtraTreeList.v22.1.xml" />
+    <Content Include="bin\Debug\QL_BanGiay.exe" />
+    <Content Include="bin\Debug\QL_BanGiay.pdb" />
+    <Content Include="obj\Debug\QL_BanGiay.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\QL_BanGiay.exe" />
+    <Content Include="obj\Debug\ql_bangiay.exe.licenses" />
+    <Content Include="obj\Debug\QL_BanGiay.pdb" />
+    <Content Include="obj\Debug\TempPE\Properties.Resources.Designer.cs.dll" />
+    <None Include="Resources\chung2.jpg" />
+    <None Include="Resources\chung1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
